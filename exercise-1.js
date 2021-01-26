@@ -66,8 +66,7 @@
             return str;
         }
 
-
-
+        strToArr('Wow! You have a lot of cats!')
 
 
 
@@ -97,6 +96,8 @@
             car.color = color 
             return car 
         }
+
+        myCar('honda', 'civic', 2018, 'white')
             
 
 
@@ -123,6 +124,7 @@
             return obj
         }
 
+        keyValue([1, 3, 4, 5, 7, 9, 22, 24, 27, 85, 86])
 
 
 
@@ -158,7 +160,9 @@
 
         function bothArr(foodArr, adjArr){
             foodArr.forEach((item, index) => {
-                 if(item[item.length - 1] === 's'){
+                 if(typeof item === 'object'){
+                   console.log(item.program + ' is ' + adjArr[index])
+                 } else if(item[item.length - 1] === 's'){
                      console.log(item +  ' are ' +  adjArr[index])
                  } else {
                      console.log(item + ' is ' + adjArr[index])
@@ -176,8 +180,15 @@
             // console.log(" the value of i in the loop is : " + i);
         }
 
-
         //your code...
+
+        let i = 0; 
+        while(i < 10){
+            console.log("The value in the loop is : " + i)
+            i++
+        }
+
+
 
 
 
@@ -185,6 +196,22 @@
         /************************************************************* */
         //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
         //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
+
+        function add(){
+            let sumFunc = sumOfThirty(30, 2, 20)
+            let divFunc = divideProductFunc(sumFunc, 10, 2)
+                return divFunc            
+        }
+
+        function sumOfThirty(x, y, z){
+            return x + y * z
+        }
+
+        function divideProductFunc(func1, num1, num2){
+            return func1 / num1 ** num2
+        }
+
+        add()
 
         //your code...
 
@@ -194,7 +221,7 @@
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
-        // 20
+        // 20 
         // 0
         // "zero";
         // const zero = 20;
@@ -215,37 +242,41 @@
 
         const day = "friday";
 
-        if(day === "monday") {
-            console.log("we got a long week ahead of us...");
-        } else if(day === "tuesday") {
-            console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-        } else if (day === "wednesday") {
-            console.log("We are smack dab in the middle of the week");
-        } else if (day === "thursday") {
-            console.log("Thursday night... the mood is right");
-        } else if (day === "friday") {
-            console.log("TGIF.  Friday truly is the best day of the week!")
-        } else {
-            console.log("It's a weekend!")
+        switch(day){
+            case "monday":
+                    console.log("we got a long week ahead of us...") 
+                    break;
+            case "tuesday":
+                    console.log("tuesday's are still beterr than mondays, but LONG way to go still")
+                    break;
+            case "wednesday":
+                    console.log("We are smack dab in the middle of the week")
+                    break;
+            case "thursday":
+                    console.log("Thursday night... the mood is right")
+                    break;
+            case "friday":
+                    console.log("TGIF.  Friday truly is the best day of the week!")
+                    break;
+            case "saturday":
+                    console.log("It's a weekend!")
+                    break;
+            case "sunday": 
+                    console.log("It's a weekend!")
+                    break;
         }
-
 
 
         /************************************************************* */
         // Refactor the following statements to use ternary expressions:
 
         const age = 10;
-        if (age > 21) console.log("adult"); else {
-            console.log("minor");
-        }
 
-        if (age > 13 && age < 19) console.log('teen'); else {
-            console.log("not a teenager");
-        };
+        age > 21 ? console.log("adult") : console.log("minor");       
 
-        if (age > 65) console.log("retired"); else {
-            console.log("still working...");
-        }
+        age > 13 && age < 19 ? console.log('teen') : console.log("not a teenager");
+
+        age > 65 ? console.log("retired") :  console.log("still working...");
 
 
         /************************************************************* */
@@ -266,6 +297,21 @@
 
         //your code...
 
+        let me = {
+            name: "Ryan",
+            age: 33,
+            gender: 'male',
+            healthy: true,
+            hobbies: ['collecting records', 'listening to music', ' and reading'],
+            profession: 'web developer',
+            education: 'TEKsystems',
+            learn: function(){
+                return console.log(this.name + ' is learning JavaScript. ')
+            },
+            action: function(){
+                return console.log(`My name is ${this.name} and I'm ${this.age} years old. My hobbies include ${this.hobbies[1]} ${this.hobbies[2]}`)
+            }
+        }
 
 
         /************************************************************* */
@@ -308,7 +354,9 @@
         const nums = [1,2,3,4,5];
         // Square every number in the array.  Store the squares in a new array.
 
-        //your code...
+
+        nums.map(item => item ** 2)
+        
 
 
 
@@ -317,7 +365,7 @@
         const fivePlus = [1,3,5,7,9,1,3,5,2,3,1,23,4,232,3,4,1,2,2,2,3,4,4,1,12,11,23,3,4,5];
         //Remove all numbers that are less than 5.  Store the results in a new array.
 
-        //your code...
+        fivePlus.filter(item => item > 5)
 
 
 
@@ -328,6 +376,18 @@
 
         //your code...
 
+        function randomArr(){
+            let arr = []
+
+            for(let i = 0; i <= 20; i++){
+                arr.push(Math.floor(Math.random() * Math.floor(1000)))
+            }
+            return arr.reduce((acc, curr) => 
+                acc + curr
+            )
+        }
+
+        randomArr()
 
 
 
@@ -335,7 +395,7 @@
         const showNums = [12,22,33,44,55,66,77,88,99,101];
         //Print out the value of each number divided by 2.  There is no need to store the output in an array.
 
-
+        showNums.forEach(item => console.log(item / 2))
 
         /************************************************************* */
         /* Chess pieces have point values associated with them.  
@@ -350,17 +410,37 @@
         ['android'] => chessCalc() => null
 
         */
-
-        function chessCalc(pieces) {
-            //your code here
+        
+        let chessPieces = {
+            PAWN: 1,
+            ROOK: 5,
+            BISHOP: 3,
+            KNIGHT: 3,
+            QUEEN: 9, 
         }
 
+        function chessCalc(pieces) {
+            let total = 0
+            for(let i of pieces){
+                for(let j in chessPieces){
+                    let i = i.toUpperCase()
+                    if(i == j){
+                        total += chessPieces[i]
+                    } 
+                }
+            }
+            return total
+        }
+
+        chessCalc(["queen", "pawn", "bishop"])
+            
 
 
 
         /************************************************************* */
 
         const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+        
         //reverse the array, without modifying / `mutating` the ones array.
 
 
@@ -441,14 +521,14 @@
         /************************** */  
         // Find all devs older than 24
 
-        //your code here...
-
+        devs.filter(item => item.age > 24)
 
 
         /************************** */  
         // Remove all people who are not developers (i.e. no tech stack)
 
         //your code here...
+        devs.filter(item => item["tech_stack"])
 
 
 
@@ -456,6 +536,16 @@
         // Calculate the total age of all the devs
 
         //your code here...
+        function totalAge(){
+            let total = 0
+
+            devs.forEach(item => {
+                total += item.age
+            })
+            return total 
+        }
+
+        totalAge()
 
 
 
@@ -464,24 +554,36 @@
 
         //your code here...
 
+        devs.filter(item => 
+            item.gender === 'f' || item.gender === 'F'
+        )
+
 
         /************************** */  
         // lowercase the genders of every dev
 
         //your code here...
 
+        devs.map(item => 
+            item.gender.toLowerCase()
+        )
 
 
         /************************** */  
         // Sort the developers by name
 
-        //your code here
-
+        devs.sort((a, b) => {
+            if(a.name > b.name){return 1}
+             if(b.name > a.name){return -1}
+                 return 0
+         })
 
         /************************** */  
         // Sort the devs by age in descending order
 
-        //your code here
+        devs.sort((a, b) => {
+            return b.age - a.age
+        })
 
 
 
@@ -489,6 +591,12 @@
         // Sort the male coders by age
 
         //your code here
+
+        function age(){
+            return devs.filter(item => 
+                item.gender === 'm' || item.gender === 'M')
+                    .sort((a, b) => a.age - b.age )
+        }
 
 
         /************************** */  
