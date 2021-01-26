@@ -145,9 +145,28 @@
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
+        function lastItem(){
+            let school = foodArray[foodArray.length - 1]
+            return console.log(school)
+        }
+
+        lastItem(foodArray)
+
+
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
         // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 
+        function bothArr(foodArr, adjArr){
+            foodArr.forEach((item, index) => {
+                 if(item[item.length - 1] === 's'){
+                     console.log(item +  ' are ' +  adjArr[index])
+                 } else {
+                     console.log(item + ' is ' + adjArr[index])
+                 }
+            })
+         }
+
+         bothArr(foodArray, adjectiveArray)
 
         /************************************************************* */
         // Refactor the for() loop to be a while loop.
