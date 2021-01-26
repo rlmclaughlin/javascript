@@ -3,55 +3,67 @@
         /************************************************************************************/
         // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
-        //your code...
-        function tekCamp() {}
-        // tekCamp();
 
+        function tekCamp() {
+            for(let i = 1; i <= 100; i++){
+                if(i % 3 === 0 && i % 5 === 0){
+                    console.log("TEKcamp")
+                } else if(i % 5 === 0){
+                    console.log("camp")
+                }  else if(i % 3 === 0){
+                    console.log("TEK")
+                } else{
+                    console.log(i)
+                }
+            }
+        }
 
 
         /************************************************************************************/
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
 
-        //your code...
-        function farenheitCelsius() {
-
+  
+        function farenheitCelsius(temp) {
+            return temp - 32 * 5 / 9
         }
 
-
-
-
+        farenheitCelsius(5)
+       
         /************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
 
-        //your code...
-        function celsiusFarenheit() {
-
+  
+        function celsiusFarenheit(temp) {
+            return temp * 9 / 5 + 32
         }
 
-
-
+        celsiusFarenheit(23)
 
 
         /************************************************************************************/
         // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
 
-        //your code...
+
         function canVote(age) {
-            return false;
+              if(age === null || age === undefined || age === ''){
+                return false
+              }
+              else if(age < 21){
+                return false
+            } else {
+                return true
+            }
         }
-
-
-
-
 
 
 
         /************************************************************************************/
         // Write a function that converts a string to an array. It should return an array.  
 
-        //your code...
-        function strToArr() {
-            return [];
+    
+        function strToArr(str) {
+            str = str.split('')
+            return str;
         }
 
 
@@ -63,10 +75,11 @@
         /************************************************************************************/
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
-        //your code...
+
         function reversePhone(number) {
-            
-        }
+            number = number + ''
+            return Number(number.split('').reverse().join(''))
+            }
 
 
 
@@ -75,8 +88,16 @@
         /************************************************************************************/
         // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
-        //your code...
 
+        function myCar(make, model, year, color){
+            let car = {}
+            car.make = make
+            car.model = model  
+            car.year = year
+            car.color = color 
+            return car 
+        }
+            
 
 
 
@@ -87,7 +108,20 @@
 
         //example : [10,23,3,4] => function() => {10 : 'even', 23 : 'odd', 3 : 'odd', 4 : 'even'}
 
-        //your code...
+
+        function keyValue(nums){
+            let obj = {}
+
+            for(let i of nums){
+                if(i % 2 === 0){
+                    obj[i] = 'even'
+                } else {
+                    obj[i] = 'odd'
+                }
+                
+            }
+            return obj
+        }
 
 
 
@@ -99,7 +133,11 @@
         const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
-        //your code...
+        for(let i = 0; i <= numbers.length; i++){
+            if(numbers[i] === 0 || numbers[i] % 3 === 0){
+                console.log(numbers[i])
+            }
+        }
 
 
 
