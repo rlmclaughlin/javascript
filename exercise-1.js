@@ -622,8 +622,20 @@
         Dr. Patel is not a developer.
         */
 
-        //your code here
+       
 
+    devs.map(item => {
+        return console.log(item.name + " specializes in " + andInserter(item["tech_stack"]))
+    })
+
+    function andInserter(item){
+           if( item === null){
+                return "not a dev" 
+           } else {
+               item.splice(item.length - 1, 0, "and") 
+             } 
+        return item 
+    }
 
         /************************************************************* */
         // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
