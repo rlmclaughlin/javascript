@@ -630,7 +630,7 @@
 
     function andInserter(item){
            if( item === null){
-                return "not a dev" 
+                return " things other than development" 
            } else {
                item.splice(item.length - 1, 0, "and") 
              } 
@@ -642,8 +642,24 @@
         const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
         function maxNumber(numbers) {
-            //your code...
+            let newArr = []
+            for(let i of numbers){
+               if(i === "one"){
+                    newArr.push(1)
+               } else if(i === "two"){
+                    newArr.push(2)
+                 } else if(i === "three"){
+                    newArr.push(3)
+                 } else {
+                    newArr.push(Number(i))
+                 }
+            }    
+            let filterNaN = newArr.filter(item => !isNaN(item))
+            return filterNaN.reduce((acc, curr) =>  acc + curr)
         }
+
+        maxNumber(numbersMixed)
+
 
         //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
