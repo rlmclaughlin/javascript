@@ -655,6 +655,7 @@
                  }
             }    
             let filterNaN = newArr.filter(item => !isNaN(item))
+            sortNums(filterNaN, false)
             return filterNaN.reduce((acc, curr) =>  acc + curr)
         }
 
@@ -664,7 +665,8 @@
         //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
         function sortNums(numbers,desc=false) {
-            //your code...
+            console.log(numbers.sort((a, b) => a - b))
+            console.log(numbers.sort((a, b) => b - a))
         };
 
 
