@@ -18,6 +18,8 @@
             }
         }
 
+        tekCamp()
+
 
         /************************************************************************************/
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
@@ -55,6 +57,7 @@
             }
         }
 
+        canVote(25)
 
 
         /************************************************************************************/
@@ -80,7 +83,7 @@
             return Number(number.split('').reverse().join(''))
             }
 
-
+        reversePhone(9729748821)
 
 
 
@@ -221,18 +224,17 @@
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
-        // 20 
-        // 0
-        // "zero";
-        // const zero = 20;
-        // null
-        // "0"
-        // !""
-        // {}
-        // () => {console.log("hello TEKcamp!");
-        // 125
-        // undefined
-        // ""
+        console.log(` question 1 is ${Boolean(20)}, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.`)
+        console.log(` this question is ${Boolean(0)} because 0 naturally holds a false value`)
+        console.log(` this is considered ${Boolean("zero")}, because any string with a non zero length is true`)
+        console.log(`this is ${Boolean(null)}, because null is only equal to undefined and itself. Nothing else`)
+        console.log(`this is ${Boolean("0")} because any string with a non zero length is true`) 
+        console.log(` this is ${Boolean(!"")}, because the empty strings are accompanied by an actual character `)
+        console.log(`this is considered ${Boolean({})} because empty curly braces are coerced as true`) 
+        console.log(`${Boolean(125)}, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.`)
+        console.log(` this is ${Boolean(undefined)}, because undefined is only equal to null and nothing else`) 
+        console.log(` this is ${Boolean("")} because empty strings are considered equal to 0`)
+        console.log(`this is considered truthy because a defined variable is coerced as truth`) //const zero = 20)
 
 
 
@@ -629,7 +631,7 @@
     })
 
     function andInserter(item){
-           if( item === null){
+           if(item === null){
                 return " things other than development" 
            } else {
                item.splice(item.length - 1, 0, "and") 
@@ -689,7 +691,7 @@
 
         //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
-        //your code...
+        
 
 
         //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
@@ -727,7 +729,7 @@
         doMath(4, 4)
 
 
-        //your code...
+       
 
 
 
