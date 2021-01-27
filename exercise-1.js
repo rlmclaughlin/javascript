@@ -442,15 +442,29 @@
         const ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
         
         //reverse the array, without modifying / `mutating` the ones array.
+        function reverse(nums){
+            let newArr = []
+            nums.map(item => newArr.unshift(item))
+            return newArr
+        }
 
+        reverse(ones)
 
 
         /************************************************************* */
         //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
         function performer(cb) {
-            //code goes here
+            return cb("Ryan McLaughlin")
         }
+
+        function myName(name){
+            return console.log("Hello! My name is " + name)
+        }
+
+        performer(myName)
+
+
 
 
         /************************************************************* */
@@ -655,8 +669,33 @@
         //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
 
         // ex : 2,3 => doMath(2,3) => adding : 5
-        const operations = [];
-        function doMath(x,y) {};
+        const operations = ["+", "-", "/", "*"];
+
+        function doMath(x,y) {
+            let operator = operations[Math.floor(Math.random() * Math.floor(4))]
+            return convert(operator, x, y)
+        };
+
+        function convert(symbol, num1, num2){
+            let operators ={
+                "+": function(a, b){
+                         return a + b
+                },
+                "-": function(a, b){
+                         return a - b
+                },
+                "/": function(a, b){
+                         return a / b
+                 },
+                "*": function(a, b){
+                         return a * b
+                 }
+            }
+           return operators[symbol](num1, num2)
+        }
+
+        doMath(4, 4)
+
 
         //your code...
 
