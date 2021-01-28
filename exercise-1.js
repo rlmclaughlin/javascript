@@ -311,7 +311,6 @@
 
         /************************************************************* */
 
-        {
             const year = 2021;
             const nums = [1,2,3,4,5];
             let sum = 0;
@@ -321,26 +320,37 @@
             //Refactor the following statements into expressions
 
 
-            // 1.
-            if(year > 2000 && year < 2100) {
-                console.log("welcome to the 21st century");
+            function welcome(){
+                if(year > 2000 && year < 2100) {
+                    console.log("welcome to the 21st century");
+                }
             }
+
+            welcome()
             
             // 2.
-            for(let i=0; i<nums.length; i++) {
-                sum += nums[i];
+
+            function total(){
+                for(let i=0; i<nums.length; i++) {
+                    sum += nums[i];
+                }
+                console.log(sum);
             }
-            console.log(sum);
-            
+
+            total()
             
             // 3.
-            while(i < nums.length) {
-                doubled.push(nums[i]*2);
-                i++;
+
+            function double(){
+                while(i < nums.length) {
+                    doubled.push(nums[i]*2);
+                    i++;
+                }
+                
+                console.log(doubled);
             }
-            
-            console.log(doubled);
-        }
+
+            double()
 
 
         /************************************************************* */
@@ -684,7 +694,7 @@
             proxy.ryan    
             
             // EXPLANATION OF WHY IT'S COOL
-            
+
             // It's a pretty cool feature in the sense that it has flexibility. Under the dot notation,
             // your able to invoke the targeted object, but you're also able to use it to fill data. For instance, 
             // in the code above, i was able to fill the 'name' field when I invoked proxy.ryan. I can put any name i wish 
@@ -756,16 +766,52 @@
 
         //your code...
 
+        // This took a while, but it was worth it to create a recursive solution. 
 
-        //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
+        let count = 3
+
+        function multiple(x){
+            while(count > 0){
+                console.log(x) 
+                count--
+                fn(x)
+            }
+        }
+
+        function fn(y){
+            return multiple(y)
+        }
+        
+
+        //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable 
+        //called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) 
+        //as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
         //your code
 
+        let message = ' is how much the stock has increased'
+        let r = .05
 
-        // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
+        function stockGain(basis){
+            let growth = basis * r
+            console.log(growth + ' is how much the stock has increased')
+            return function years(yrs){
+                let prediction = yrs * growth 
+                   console.log(prediction + ' dollars is how much your stock is predicted to grow over ' + yrs + ' years')
+            }
+        }
+    
+        
+
+        
+
+        // Once finished, declare a variable called futureValue that holds your stockGain function and enter 
+        // any amount for the cost basis and a number for the number of years.  Run the function returned by 
+        //the higher order function to display the future value of the stock.  
 
         //your code...
 
+        let futureValue = stockGain(3)(3)
 
 
 // DO NOT DELETE THIS EXPORT
@@ -773,9 +819,5 @@ module.exports = {
     tekCamp,
     canVote
 }
-
-
-//*************************************** */
-
 
 
