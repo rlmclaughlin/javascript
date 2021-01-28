@@ -29,7 +29,7 @@
             return temp - 32 * 5 / 9
         }
 
-        farenheitCelsius(5)
+        farenheitCelsius()
        
         /************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
@@ -39,7 +39,7 @@
             return temp * 9 / 5 + 32
         }
 
-        celsiusFarenheit(23)
+        celsiusFarenheit()
 
 
         /************************************************************************************/
@@ -72,8 +72,6 @@
         strToArr('Wow! You have a lot of cats!')
 
 
-
-
         /************************************************************************************/
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
@@ -103,10 +101,6 @@
         myCar('honda', 'civic', 2018, 'white')
             
 
-
-
-
-
         /************************************************************************************/
         // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
 
@@ -131,22 +125,24 @@
 
 
 
-
-
-
         /************************************************************************************/
+       
         const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
-        for(let i = 0; i <= numbers.length; i++){
-            if(numbers[i] === 0 || numbers[i] % 3 === 0){
-                console.log(numbers[i])
+        function numsArray(){
+            for(let i = 0; i <= numbers.length; i++){
+                if(numbers[i] === 0 || numbers[i] % 3 === 0){
+                    console.log(numbers[i])
+                }
             }
         }
 
+        numsArray()
 
 
         /************************************************************************************/
+       
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
@@ -173,7 +169,7 @@
             })
          }
 
-         bothArr(foodArray, adjectiveArray)
+        bothArr(foodArray, adjectiveArray)
 
         /************************************************************* */
         // Refactor the for() loop to be a while loop.
@@ -185,15 +181,15 @@
 
         //your code...
 
-        let i = 0; 
-        while(i < 10){
-            console.log("The value in the loop is : " + i)
-            i++
+        function whileLoop(){
+            let i = 0; 
+            while(i < 10){
+                console.log("The value in the loop is : " + i)
+                i++
+            }
         }
 
-
-
-
+        whileLoop()
 
 
         /************************************************************* */
@@ -237,8 +233,6 @@
         console.log(`this is considered truthy because a defined variable is coerced as truth`) //const zero = 20)
 
 
-
-
         /************************************************************* */
         // Refactor the following code using a switch statement:
 
@@ -267,7 +261,6 @@
                     console.log("It's a weekend!")
                     break;
         }
-
 
         /************************************************************* */
         // Refactor the following statements to use ternary expressions:
@@ -678,21 +671,46 @@
 
 
             //your code...
+            let target = {
+                greet: "Thanks for visiting my site"
+            }
+            let proxy = new Proxy(target, {
+                get (user, name) {
+                    return name in user ? user[name] : `Hello, ${name}! Very nice to see you today.`
+                }
+            })
 
+            proxy.greet   
+            proxy.ryan    
+            
+            // EXPLANATION OF WHY IT'S COOL
+            
+            // It's a pretty cool feature in the sense that it has flexibility. Under the dot notation,
+            // your able to invoke the targeted object, but you're also able to use it to fill data. For instance, 
+            // in the code above, i was able to fill the 'name' field when I invoked proxy.ryan. I can put any name i wish 
+            // in the dot notation, and it will populate that field, providing the code is set up correctly. 
 
 
         /************************************************************* */
         //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
-
         const mapObj = new Map();
-        mapObj.set({company : "TEKsystems"},"object");
+        mapObj.set("object",{'company' : "TEKsystems"})
+        mapObj.set("boolean",{'isPresent': false})
+        mapObj.set("number",{'age': 33})   
+        mapObj.set("undefined",{'role': undefined})
+        mapObj.set("null", {'teamWins': null})
 
-        console.log(mapObj.has({company : "TEKsystems"}));
+        console.log(mapObj.has('object', {company: "TEKsystems"}))
+
+        console.log("It returned false because the sequence in the mapObj.set() function was out of order. The 'object' string was placed in the wrong position within the parameter.")
 
         //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
-        
-
+        let arr = []
+        for (let [key, value] of mapObj) {
+            arr.push(key)
+        }
+        console.log(arr)
 
         //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
