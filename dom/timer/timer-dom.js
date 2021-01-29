@@ -1,9 +1,5 @@
 let time = document.querySelector('p')
 
-let startButton = document.querySelector('button')
-let stopButton = document.querySelector('.btn2')
-let resetButton = document.querySelector('.btn3') 
-
 let timerId;
 let counter = 10;
 
