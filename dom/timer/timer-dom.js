@@ -5,7 +5,7 @@ let counter = 10;
 
 time.innerHTML = counter
 
-function start() {
+let start = () => {
     if (!counter) {
         reset();
     } else {
@@ -13,22 +13,22 @@ function start() {
     }
 }
   
-function stop() {
+let stop = () => {
     if (timerId) {
         clearInterval(timerId);
         timerId = null;
     }
 }
   
-function reset() {
+let reset = () => {
     stop();
     counter = 10;
     time.innerHTML = counter
 }
   
-function clock() {
+let clock = () => {
     timerId = setInterval(function() {
-        if (-1 >= counter) {
+        if (0 >= counter) {
             stop();
             return;
         }

@@ -1,0 +1,52 @@
+link file that your intending to test
+
+make sure test file uses same name as targeted file. Proper format ( exercise-1.test.js )
+
+---------------------------------------------------------
+To Be
+
+test('Adds 2 + 2 to equal 4', () => {
+    expect(functions.add(2, 2)).toBe(4)
+})
+
+if the targeted function is to produce a solution of 4, this test
+this test is adding the two parameters and expecting the solution toBe(4)
+This will return 'true'
+---------------------------------------------------------
+
+Not TO BE
+
+test("should be nuyll', () => {
+    expect(functions.add(2, 2,)).not.toBe(5)
+})
+
+functions.add === variable that's an object and 'add'
+being a key accessed by dot notation
+-----------------------------------------------------
+
+Null 
+
+test('should be null', () => {
+    expect(functions.isNull()).toBeNull()
+
+})
+------------------------------------------------------------
+
+test('should be falsy', () => {
+    expect(functions.checkValue(2)).toBeFalsy()
+})
+
+-------------------------------------------------------
+toBeLessTHanOrEqual
+
+test("should be under 1600', () => {
+    const load1 = 800; 
+    expect(load1).toBeLessThanOrEqual(1600)
+})
+--------------------------------------------
+toContain()
+
+test('admin should be in usernames', () => {
+    let usernames = ['john', 'bary', 'admin']
+    expect(usernames).toContain('admin')       //true
+})

@@ -428,7 +428,7 @@
             let total = 0
             for(let i of pieces){
                 for(let j in chessPieces){
-                    let i = i.toUpperCase()
+                    i = i.toUpperCase()
                     if(i == j){
                         total += chessPieces[i]
                     } 
