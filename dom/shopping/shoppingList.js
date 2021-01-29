@@ -17,8 +17,6 @@
     
     let button = document.querySelector("button")
 
-    
-
     button.addEventListener("click", () =>{
         let ul = document.querySelector("ul")
         let input = document.querySelector("#item").value
@@ -34,11 +32,13 @@
         ul.appendChild(li)
         
         span.textContent = input
+
         deleteButton.textContent = "Delete"
         deleteButton.onclick = removeItem;
 
-        let focus = document.querySelector('input').focus()
-        focus
+        document.querySelector('input').value =''       
+        document.querySelector('input').focus()
+        
     })
 
     function removeItem(e){
