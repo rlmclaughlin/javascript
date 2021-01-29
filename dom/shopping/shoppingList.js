@@ -32,12 +32,13 @@
         li.appendChild(listItem)
         li.appendChild(deleteButton) 
         ul.appendChild(li)
-    
+        
         span.textContent = input
         deleteButton.textContent = "Delete"
-        deleteButton.type = "button";
-        deleteButton.value = "Remove";
         deleteButton.onclick = removeItem;
+
+        let focus = document.querySelector('input').focus()
+        focus
     })
 
     function removeItem(e){
