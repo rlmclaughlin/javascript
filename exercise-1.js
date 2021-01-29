@@ -151,7 +151,7 @@
             return console.log(school)
         }
 
-        lastItem(foodArray)
+        lastItem()
 
 
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
@@ -757,10 +757,6 @@
         doMath(4, 4)
 
 
-       
-
-
-
         /************************************************************* */
         //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
@@ -781,8 +777,7 @@
         function fn(y){
             return multiple(y)
         }
-        
-
+         
         //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable 
         //called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) 
         //as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
@@ -794,7 +789,7 @@
 
         function stockGain(basis){
             let growth = basis * r
-            console.log(growth + ' is how much the stock has increased')
+            console.log(growth + message)
             return function years(yrs){
                 let prediction = yrs * growth 
                    console.log(prediction + ' dollars is how much your stock is predicted to grow over ' + yrs + ' years')
@@ -802,9 +797,6 @@
         }
     
         
-
-        
-
         // Once finished, declare a variable called futureValue that holds your stockGain function and enter 
         // any amount for the cost basis and a number for the number of years.  Run the function returned by 
         //the higher order function to display the future value of the stock.  
