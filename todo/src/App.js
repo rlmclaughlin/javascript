@@ -6,8 +6,11 @@ import Form from './Components/Form'
 
 function App() {
 
-  const [todos, setTodos] = useState(["eat","sleep","code","pray","repeat"]); 
+  const [todos, setTodos] = useState([]); 
 
+  const deleteHandler = (id) => {
+    setTodos(todos.filter(item => item !== id))
+  }
   
   return (
     <div className="App">
@@ -16,7 +19,7 @@ function App() {
          <br/>
           <p>Todo List</p>
           <Form setTodos={setTodos} todos={todos}/>
-          <TodoList todos={todos}/>
+          <TodoList todos={todos} deleteHandler={deleteHandler}/>
         </div>
       </header>
     </div>
@@ -24,3 +27,4 @@ function App() {
 }
 
 export default App;
+

@@ -6,7 +6,7 @@ function TodoList(props){
     
     return(
         props.todos.map((item, index) => 
-           <Todo todo={item} key={index}/>  
+           <Todo todo={item} key={index} id={index} deleteHandler={props.deleteHandler}/>  
         )
         
     )
