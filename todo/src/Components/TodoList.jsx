@@ -3,8 +3,12 @@ import Todo from './Todo.jsx'
 
 
 function TodoList(props){
+    
     return(
-        <Todo /> 
+        props.todos.map((item, index) => 
+           <Todo todo={item} key={index}/>  
+        )
+        
     )
 }
 

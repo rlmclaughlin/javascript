@@ -16,7 +16,7 @@ function App() {
          <br/>
           <p>Todo List</p>
           <Form setTodos={setTodos} todos={todos}/>
-          <TodoList />
+          <TodoList todos={todos}/>
         </div>
       </header>
     </div>
