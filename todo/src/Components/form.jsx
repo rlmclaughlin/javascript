@@ -16,16 +16,19 @@ function TodoForm(props){
 
     const submitHandler = (e) => {
         e.preventDefault()
-        props.setTodos((item) => ([
-            ...item,
-            todo.item
-        ]))
+        if(todo.item === ''){
+            console.log("Invalid Submission")
+        } else {
+            props.setTodos((item) => ([
+                ...item,
+                todo.item
+            ]))
+        }
         setTodo({item: ''})
     }
 
     return(
         <main>
-           
             <form onSubmit={submitHandler}> 
              <h1>Create a Todo</h1>
                 <input name='todo' 

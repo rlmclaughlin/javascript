@@ -13,12 +13,13 @@ function TodoList(props){
             {props.todos.map((item, index) => 
                 <Todo todo={item} key={index} id={index} deleteHandler={props.deleteHandler}/>  
             )}
+            {!props.todos.length ? '' :
             <section id='delete-list-container'>
                 <div className="background">
                     <button onClick={props.deleteAll}className='delete-list-button'>DELETE LIST</button>
                 </div>
-                
             </section>
+            }
         </div>
     )
 }

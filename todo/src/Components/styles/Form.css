@@ -37,6 +37,10 @@ main form input{
     box-shadow: -1px -3px 20px rgb(160, 122, 122);
 }
 
+main form input:focus{
+    outline: none;
+}
+
 main form input::placeholder{
     text-align: center;
     color: rgb(240, 159, 175);
@@ -52,5 +56,8 @@ main form button{
     box-shadow: -1px -3px 20px;
     font-weight: 800;
     color: rgb(240, 159, 175);
+}
 
+main form button:focus{
+    outline: none;
 }
