@@ -4,7 +4,7 @@ import './styles/Todo.css'
 function Todo(props) {
     return (
         <section class='todo-container'>
-            <p>{props.todo}</p>
+            <p><span>{props.id + 1}.</span> &nbsp; {props.todo} &nbsp;</p>
             <button onClick={() => props.deleteHandler(props.todo)}>X</button>
         </section>
     )

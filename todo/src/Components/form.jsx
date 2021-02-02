@@ -25,10 +25,11 @@ function TodoForm(props){
 
     return(
         <main>
-            <h2>Todo List</h2>
+           
             <form onSubmit={submitHandler}> 
+             <h1>Create a Todo</h1>
                 <input name='todo' 
-                       placeholder='todo here' 
+                       placeholder='Insert Todo Here' 
                        value={todo.item} 
                        type='text' 
                        onChange={changeHandler}/>
