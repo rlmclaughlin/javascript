@@ -1,0 +1,39 @@
+main{
+    position: absolute;
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: space-around;;
+    align-items: center;
+    height: 80%; 
+    width: 49%;
+    top: 0px;
+    left: 0px;
+}
+
+form{
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+main form input{
+    background:  #b6024e; 
+    border: 3px solid #88031d;
+    border-radius: 25px; 
+    padding: 5px 0px; 
+    width: 300px; 
+}
+
+main form input::placeholder{
+    text-align: center;
+}
+
+main form button{
+    background: transparent;
+    border: 3px solid #88031d;
+    width: 160px; 
+    padding: 5px 
+
+}

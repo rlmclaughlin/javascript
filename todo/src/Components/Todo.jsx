@@ -1,12 +1,12 @@
 import React from 'react'
+import './styles/Todo.css'
 
 function Todo(props) {
-  
     return (
-        <div>
+        <section class='todo-container'>
             <p>{props.todo}</p>
-            <button onClick={() => props.deleteHandler(props.todo)}>Delete</button>
-        </div>
+            <button onClick={() => props.deleteHandler(props.todo)}>X</button>
+        </section>
     )
 }
 

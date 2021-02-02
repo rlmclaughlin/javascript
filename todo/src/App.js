@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import './App.css';
 import TodoList from './Components/TodoList';
-import Form from './Components/Form'
+import TodoForm from './Components/Form'
 
 function App() {
 
@@ -14,14 +14,13 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-         <br/>
-          <p>Todo List</p>
-          <Form setTodos={setTodos} todos={todos}/>
-          <TodoList todos={todos} deleteHandler={deleteHandler}/>
-        </div>
-      </header>
+        <section>
+            <img/>
+            <TodoForm setTodos={setTodos} todos={todos}/>
+        </section>
+        <section>
+            <TodoList todos={todos} deleteHandler={deleteHandler}/>  
+        </section>
     </div>
   );
 }

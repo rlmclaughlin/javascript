@@ -1,15 +1,35 @@
-.App {
-  text-align: center;
+body{
+  margin: 0 auto; 
+  height: 100%; 
+  border-spacing: border-box;
 }
 
-.App-header {
+
+.App{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   font-size: calc(10px + 2vmin);
-  color: black;
+  display: flex; 
+  flex-wrap: wrap; 
+  background: black;
 }
+
+img{
+  background: url('https://images.unsplash.com/photo-1506994011460-5482746d30a1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;
+  filter: blur(15px);
+  width: 100%;
+  position: relative;
+}
+
+.App section{
+  width: 50%;
+  margin: 0 auto; 
+}
+
+
 
 

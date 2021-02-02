@@ -1,7 +1,8 @@
 import React, {useState} from 'react' 
+import './styles/Form.css'
 
 
-function Form(props){
+function TodoForm(props){
 
     const [todo, setTodo] = useState({item: ''})
 
@@ -11,7 +12,6 @@ function Form(props){
             ...items,
             item: e.target.value
         }))
-        console.log(todo)
     }
 
     const submitHandler = (e) => {
@@ -20,21 +20,23 @@ function Form(props){
             ...item,
             todo.item
         ]))
+        setTodo({item: ''})
     }
 
-    console.log(props.todos)
-    console.log(props.todos)
-
     return(
-        <form onSubmit={submitHandler}> 
-            <input name='todo' 
-                   placeholder='todo here' 
-                   value={todo.item} 
-                   type='text' 
-                   onChange={changeHandler}/>
-            <button type='submit'>Submit</button>
-        </form>
+        <main>
+            <h2>Todo List</h2>
+            <form onSubmit={submitHandler}> 
+                <input name='todo' 
+                       placeholder='todo here' 
+                       value={todo.item} 
+                       type='text' 
+                       onChange={changeHandler}/>
+                <br/>
+                <button type='submit'>Submit</button>
+            </form>
+        </main>
     )
 }
 
-export default Form
+export default TodoForm
