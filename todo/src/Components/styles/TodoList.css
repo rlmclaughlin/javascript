@@ -18,3 +18,37 @@
     padding-top: 40%; 
     text-shadow: -5px -3px 20px rgb(206 82 82);
 }
+
+div{
+    margin: 0 auto;
+}
+
+.delete-list-button{
+
+    background: black;
+    border: 3px solid #88031d;
+    border-radius: 15px;
+    width: 160px;
+    padding: 7px;
+    box-shadow: -1px -3px 20px;
+    text-align: center;
+    font-weight: 800;
+    color: rgb(240, 159, 175);
+    z-index: -1;
+}
+
+#delete-list-container{
+    position: fixed; 
+    width: 50%;
+    bottom: 0px;    
+    display: flex; 
+    justify-content: center;   
+
+}
+
+.background{
+    background: black;
+    display: inline-block;
+    padding: 15px 60px 30px 60px;
+    margin-bottom: 0px;
+}
