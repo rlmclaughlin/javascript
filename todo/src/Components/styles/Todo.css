@@ -2,7 +2,7 @@
     display: flex; 
     flex-wrap: wrap;  
     width: 100%; 
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; 
     padding: 25px 0px; 
     color: #b6024e;
@@ -22,4 +22,5 @@
 .todo-container p{
     margin: 0px 5px; 
     color: #b6024e;
+    text-decoration: none;
 }

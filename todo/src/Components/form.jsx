@@ -20,9 +20,10 @@ function TodoForm(props){
             console.log("Invalid Submission")
         } else {
             props.setTodos((item) => ([
-                ...item,
-                todo.item
-            ]))
+                ...item,{
+                item: todo.item,
+                isCompleted: false
+            }]))
         }
         setTodo({item: ''})
     }
@@ -30,7 +31,7 @@ function TodoForm(props){
     return(
         <main>
             <form onSubmit={submitHandler}> 
-             <h1>Create a Todo</h1>
+                <h1>Create a Todo</h1>
                 <input name='todo' 
                        placeholder='Insert Todo Here' 
                        value={todo.item} 

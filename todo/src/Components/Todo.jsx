@@ -1,10 +1,12 @@
-import React from 'react'
+import React  from 'react'
 import './styles/Todo.css'
 
 function Todo(props) {
-    return (
+   
+    return(
         <section className='todo-container'>
-            <p><span>{props.id + 1}.</span> &nbsp; {props.todo} &nbsp;</p>
+            <span>{props.id + 1}.</span> 
+            <p onClick={() => props.isCompletedHandler(props.id, props.completed, props.todo)}>{props.todo}</p>
             <button onClick={() => props.deleteHandler(props.todo)}>X</button>
         </section>
     )

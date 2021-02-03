@@ -30,6 +30,10 @@ img{
   margin: 0 auto; 
 }
 
+.strike{
+  text-decoration: line-through;
+}
+
 
 
 
