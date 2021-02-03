@@ -8,14 +8,14 @@
     text-shadow: -5px -3px 20px rgb(206 82 82);
 }
 
-.color{
+.please-enter-message{
     color: #b6024e;
     text-shadow: -15px -13px 20px rgb(0, 0, 0);
     font-size: 36px;
     text-align: center;
     font-weight: 100; 
     text-decoration: underline;   
-    padding-top: 50%; 
+    margin-top: 270px;
     text-shadow: -5px -3px 20px rgb(206 82 82);
 }
 

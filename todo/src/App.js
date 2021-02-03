@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import {useState} from 'react';
 import './App.css';
 import TodoList from './Components/TodoList';
@@ -18,15 +17,13 @@ function App() {
     
     const isCompletedHandler = (id, isCompleted) => {
         let newState = [...todos];
-          if(isCompleted === false){
-            newState[id].isCompleted = true;
-            document.querySelectorAll('p')[id].style='text-decoration: line-through'
-            setTodos(newState)
-          } else {
-              newState[id].isCompleted = false
-              document.querySelectorAll('p')[id].style='text-decoration: none'
-              setTodos(newState)
-            }
+        if(!isCompleted){
+          newState[id].isCompleted = true;
+          setTodos(newState)
+        } else {
+          newState[id].isCompleted = false
+          setTodos(newState)          
+        }       
     }
 
     return (
