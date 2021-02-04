@@ -1,15 +1,15 @@
 import React from 'react'
+import '../Styles/nav.css'
 
 function NavBar() {
     return (
         <nav>
-            <h1>TEK News</h1>
-            <span>Add your &lt;Link/&gt;'s to the Pages Here in the NavBar</span>
-            <p>You will need to use React Router's Navigation system as opposed to 'a' tags to achieve proper client side routing</p>
+            <h3>My News</h3>
             <ul>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Sports</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Weather</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li>
+                <li>Breaking</li>
+                <li>Business</li>
+                <li>Science</li>
+                <li>Stocks</li>
             </ul>
         </nav>
     )

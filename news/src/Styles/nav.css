@@ -1,0 +1,28 @@
+nav {
+    border-bottom: 10px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+nav h3{
+margin-left: 20px;
+}
+  
+nav ul{
+    display: flex; 
+    flex-wrap: wrap;    
+}
+  
+nav a{
+    color : orange;
+    text-decoration: none;    
+}
+
+nav li{
+ margin-right: 20px;    
+}
+
+  
