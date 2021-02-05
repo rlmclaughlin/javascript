@@ -12,12 +12,14 @@ function Sports() {
       })
 
     return (
-        <div>
-            <h1>Sports News goes here: </h1>
-            <Article/>
-            <Article/>
-            <Article/>
-        </div>
+        <main>
+            <section>
+                IMAGE GOES HERE WITH TEXT INSIDE FULL WIDTH OF VIEWPORT
+            </section>
+            <section>
+                thumbnails and descriptions of articles will go here. Two across at full width
+            </section>    
+        </main>
     )
 }
 

@@ -7,6 +7,12 @@ import Weather from './Views/Weather';
 import Politics from './Views/Politics';
 import axios from 'axios'
 import Footer from './Components/Footer';
+import Sidebar from './Views/Sidebar'
+
+//<Sports/>
+//<Weather/>
+//<Politics/>
+//<Footer/>
 
 function App() {
 
@@ -16,17 +22,14 @@ function App() {
     })
     .catch(error => {console.log("there was an error")})
   })
-  
+
   return (
     <div className="App">
-      <header className="App-header">
         <NavBar/>
-          <Headlines/>
-          <Sports/>
-          <Weather/>
-          <Politics/>
-      </header>
-      <Footer/>
+        <section className='desktop-container'>
+            <Headlines/>
+            <Sidebar /> 
+        </section>
     </div>
   );
 }

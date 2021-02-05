@@ -4,8 +4,8 @@ html{
 }
 
 .App {
-  height: 100vh; 
   margin: 0 auto; 
+  max-width: 1200px;
 }
 
 a {
@@ -13,10 +13,18 @@ a {
   text-decoration: none;
 }
 
-
 li {
   list-style: none;
 }
+
+.desktop-container{
+  width: 100%;
+  display: flex; 
+  flex-wrap: wrap; 
+  margin-top: 25px;
+}
+
+
 
 
 

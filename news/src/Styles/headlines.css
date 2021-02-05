@@ -1,0 +1,30 @@
+.headlines-container{
+    width: 72%; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.feature-image{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.feature-image-content{
+    background: rgba(0, 0, 0, 0.568);
+    color: white;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.headline-container{
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+    align-items: baseline;
+}
+

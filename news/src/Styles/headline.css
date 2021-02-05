@@ -1,0 +1,51 @@
+.headline-card{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%; 
+    padding: 5px 0px; 
+    border-radius: 5px; 
+}
+
+.headline-content{
+    width: 65%;
+}
+
+.headline-content h3{
+    font-size: 19px;
+    margin-top: 0px; 
+    text-decoration: underline;
+}
+.headline-content p{
+    font-size: 15px;
+    margin-top: 0px;  
+}
+
+
+
+.headline-image{
+    width: 30%;
+}
+
+.headline-image img{
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 170px;
+    box-shadow: 0 10px 6px -6px 
+
+}
+
+.headline-name-date{
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.headline-name-date p{
+    margin-bottom: 0px; 
+    font-size: 13px; 
+    margin-right: 10%;
+}

@@ -1,23 +1,42 @@
 import React, {useEffect, useState} from 'react';
+import Headline from './Headline.js'
 import axios from 'axios'
+import '../Styles/headlines.css'
 import Article from '../Components/Article';
 
 function Headlines() {
+    const [headlines, setHeadlines] = useState([])
+
     useEffect(() => {
-        axios.get('https://content.guardianapis.com/search?api-key=a99321c3-6968-4d0c-9913-bc43cbfbcbd1').then(response => {
-          console.log("HEADLINES", response.data.response.results)
-        })
-        .catch(error => {console.log("there was an error")})
-      })
+        axios.get("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
+            .then(response => {
+                setHeadlines(response.data.results)
+            })
+        .catch(error => {console.log("there was an error", error)})
+      }, [])
+
+      if(!headlines.length){return 'your data is coming...'}
+
+      
 
     return (
-        <div>
-            <h1>Headline News goes here: </h1> 
-            <p>This should be on the main home page</p>
-            <Article/>
-            <Article/>
-            <Article/>
-        </div>
+        <main className='headlines-container'>          
+            <div className="feature-image" style={{backgroundImage: `url(${headlines[0].multimedia[0].url})`}}>
+                <section className='feature-image-content'>
+                    <h1>{headlines[0].title}</h1>
+                    <p>{headlines[0].abstract}</p>
+                </section>
+            </div>
+            
+            <hr style={{width: "100%", height: '5px', backgroundColor: 'orange', marginTop: '15px', marginBottom: "0px"}}/>
+
+            <section className='headline-container'>
+                {headlines.map((item, index) => 
+                    index > 1 ? <Headline key={index} headline={item} headlineImage={item.multimedia[0].url}/>
+                    : ''
+                )}
+            </section>    
+        </main>
     )
 }
 
