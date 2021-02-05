@@ -29,7 +29,7 @@ function Headline(props){
             <section className='headline-image'>
                 <img style={{backgroundImage: `url(${props.headlineImage})`}}/>                
             </section>
-            <hr style={{width: "100%", height: '5px', backgroundColor: 'orange', marginTop: '15px', marginBottom: "0px"}}/>
+            <hr style={{width: "100%", height: '5px', backgroundColor: 'orange', marginTop: '10px', marginBottom: "0px"}}/>
         </article>
     )
 }

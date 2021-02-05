@@ -2,5 +2,45 @@
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
-    width: 28%; 
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    width: 33%; 
+    height: 100%;
 }
+
+.sidebar-card{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar-card section{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column; 
+    justify-content: center;
+    width: 60%;
+}
+
+.sidebar-card section h5{
+    margin-bottom: 0px;
+}
+
+.sidebar-card section p{
+    font-size: 11px;
+}
+
+.sidebar-card img{
+    width: 30%;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.liftChild{
+    margin-top: 0px; 
+}
+

@@ -27,8 +27,8 @@ function Headlines() {
                     <p>{headlines[0].abstract}</p>
                 </section>
             </div>
-            
-            <hr style={{width: "100%", height: '5px', backgroundColor: 'orange', marginTop: '15px', marginBottom: "0px"}}/>
+
+            <hr style={{width: "100%", height: '5px', backgroundColor: 'orange', marginTop: '20px', marginBottom: "3px"}}/>
 
             <section className='headline-container'>
                 {headlines.map((item, index) => 

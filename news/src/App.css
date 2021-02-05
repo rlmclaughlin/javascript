@@ -5,7 +5,7 @@ html{
 
 .App {
   margin: 0 auto; 
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 a {
@@ -21,6 +21,7 @@ li {
   width: 100%;
   display: flex; 
   flex-wrap: wrap; 
+  justify-content: space-between;
   margin-top: 25px;
 }
 

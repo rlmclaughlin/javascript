@@ -1,12 +1,22 @@
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import '../Styles/sidebar.css'
-import axios from 'axios'
 
-function Sidebar(){
-
+function Sidebar(props){
+ console.log(props)
+ if(props.length === 0){return "Loading..."}
     return(
         <section className="sidebar-container">
-            <p>SIDEBAR!!!!!!!!!!!!!!!!!!!asd asdfasdf</p>
+            {props.headlines.map((item, index) => 
+                <div key={index} className='sidebar-card'>
+                    <section>
+                        <h5 className={index === 23 ? "liftChild" : ''}>{item.title}</h5>
+                        <p>{item.byline}</p>                        
+                    </section>
+                    <img style={{backgroundImage: `url(${item.multimedia[0].url})`}}/> 
+                    <hr style={{width: "100%", height: '2px', backgroundColor: 'orange', marginTop: '0px', marginBottom: "0px"}}/>
+
+                </div>
+            )}
         </section>
     )
 }
