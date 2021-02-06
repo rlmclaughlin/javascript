@@ -7,7 +7,7 @@ import Sports from './Views/Sports';
 import Weather from './Views/Weather';
 import Politics from './Views/Politics';
 import axios from 'axios'
-import Footer from './Components/Footer';
+import Science from './Views/Science';
 import Sidebar from './Views/Sidebar'
 
 
@@ -17,7 +17,7 @@ function App() {
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
-        axios.get("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
+        axios.get("https://api.nytimes.com/svc/topstories/v2/us.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
             .then(response => {
                 setHeadlines(response.data.results)
             })
@@ -45,6 +45,9 @@ function App() {
          
             <Route path='/politics' render={ props => (
                 <Politics {...props} renderData={renderData} articles={articles}/>
+            )}/>
+            <Route path='/science' render={ props => (
+                <Science {...props} renderData={renderData} articles={articles}/>
             )}/>
                 
              <Sidebar headlines={headlines}/> 

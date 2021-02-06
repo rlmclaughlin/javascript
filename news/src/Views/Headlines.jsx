@@ -2,13 +2,12 @@ import React, {useEffect, useState} from 'react';
 import Headline from './Headline.js'
 import axios from 'axios'
 import '../Styles/headlines.css'
-import Article from '../Components/Article';
 
 function Headlines() {
     const [headlines, setHeadlines] = useState([])
 
     useEffect(() => {
-        axios.get("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
+        axios.get("https://api.nytimes.com/svc/topstories/v2/world.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
             .then(response => {
                 setHeadlines(response.data.results)
             })

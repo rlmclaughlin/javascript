@@ -9,7 +9,7 @@ function NavBar() {
             <ul>
                 <Link to='/'><li>Breaking</li></Link>
                 <Link to='politics'><li>Politics</li></Link>
-                <li>Science</li>
+                <Link to='science'><li>Science</li></Link>
                 <li>Stocks</li>
             </ul>
         </nav>

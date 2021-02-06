@@ -1,10 +1,10 @@
 import React,{useState, useEffect} from 'react';
-import PoliticsCard from './PoliticsCard.jsx';
+import ScienceCard from './PoliticsCard.jsx';
 
-function Politics(props) {
+function Science(props) {
 
 useEffect(() => {
-    props.renderData('politics')
+    props.renderData('science')
 }, [])
 
 if(props.articles.length === 0){return "loading"}
@@ -22,7 +22,7 @@ if(props.articles.length === 0){return "loading"}
 
             <section className='headline-container'>
                 {props.articles.map((item, index) => 
-                    index > 1 ? <PoliticsCard key={index} headline={item} headlineImage={item.multimedia[0].url}/>
+                    index > 1 ? <ScienceCard key={index} headline={item} headlineImage={item.multimedia[0].url}/>
                     : ''
                 )}
             </section>    
@@ -30,4 +30,4 @@ if(props.articles.length === 0){return "loading"}
     )
 }
 
-export default Politics;
+export default Science;
