@@ -14,9 +14,9 @@ function Sidebar(props){
                     </section>
                     <img style={{backgroundImage: `url(${item.multimedia[0].url})`}}/> 
                     <hr style={{width: "100%", height: '2px', backgroundColor: 'orange', marginTop: '0px', marginBottom: "0px"}}/>
-
                 </div>
             )}
+            <h3>-{props.sidebarGenre}-</h3>
         </section>
     )
 }

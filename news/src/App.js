@@ -16,6 +16,7 @@ function App() {
 
     const [headlines, setHeadlines] = useState([])
     const [articles, setArticles] = useState([])
+    const [sidebarGenre, setSidebarGenre] = useState('')
 
     useEffect(() => {
         axios.get("https://api.nytimes.com/svc/topstories/v2/us.json?api-key=QRcjNGNvNxxT8GAUTmAw2ch0mByGzKBL")
@@ -42,19 +43,20 @@ function App() {
     <div className="App">
         <NavBar/>
         <section className='desktop-container'>
-            <Route exact path='/' component={Headlines}/>
-         
+            <Route exact path='/' render={props => (
+                <Headlines {...props} setSidebarGenre={setSidebarGenre} />
+            )} />         
             <Route path='/politics' render={ props => (
-                <Politics {...props} renderData={renderData} articles={articles}/>
+                <Politics {...props} renderData={renderData} articles={articles} setSidebarGenre={setSidebarGenre}/>
             )}/>
             <Route path='/science' render={ props => (
-                <Science {...props} renderData={renderData} articles={articles}/>
+                <Science {...props} renderData={renderData} articles={articles} setSidebarGenre={setSidebarGenre}/>
             )}/>
             <Route path='/business' render={ props => (
-                <Business {...props} renderData={renderData} articles={articles}/>
+                <Business {...props} renderData={renderData} articles={articles} setSidebarGenre={setSidebarGenre}/>
             )}/>
                 
-             <Sidebar headlines={headlines}/> 
+             <Sidebar headlines={headlines} sidebarGenre={sidebarGenre}/> 
         </section>
     </div>
   );

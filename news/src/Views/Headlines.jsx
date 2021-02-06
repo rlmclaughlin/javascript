@@ -3,7 +3,7 @@ import Headline from './Headline.js'
 import axios from 'axios'
 import '../Styles/headlines.css'
 
-function Headlines() {
+function Headlines(props) {
     const [headlines, setHeadlines] = useState([])
 
     useEffect(() => {
@@ -11,8 +11,10 @@ function Headlines() {
             .then(response => {
                 setHeadlines(response.data.results)
             })
-        .catch(error => {console.log("there was an error", error)})
-      }, [])
+            .catch(error => {console.log("there was an error", error)
+        })
+        props.setSidebarGenre("Headlines")
+    }, [])
 
       if(!headlines.length){return 'your data is coming...'}
 

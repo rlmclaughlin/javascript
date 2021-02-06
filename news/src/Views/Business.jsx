@@ -5,6 +5,7 @@ function Business(props) {
 
 useEffect(() => {
     props.renderData('business')
+    props.setSidebarGenre('Business')
 }, [])
 
 if(props.articles.length === 0){return "loading"}

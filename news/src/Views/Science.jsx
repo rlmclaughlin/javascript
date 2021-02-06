@@ -5,12 +5,13 @@ function Science(props) {
 
 useEffect(() => {
     props.renderData('science')
+    props.setSidebarGenre('Science')
 }, [])
 
 if(props.articles.length === 0){return "loading"}
 
     return (
-        <main className='headlines-container'>          
+        <main className='headlines-container'>      
             <div className="feature-image" style={{backgroundImage: `url(${props.articles[0].multimedia[0].url})`}}>
                 <section className='feature-image-content'>
                     <h1>{props.articles[0].title}</h1>

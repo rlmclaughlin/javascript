@@ -5,6 +5,7 @@ function Politics(props) {
 
 useEffect(() => {
     props.renderData('politics')
+    props.setSidebarGenre('Politics')
 }, [])
 
 if(props.articles.length === 0){return "loading"}
