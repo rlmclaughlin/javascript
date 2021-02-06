@@ -10,7 +10,7 @@ function NavBar() {
                 <Link to='/'><li>Breaking</li></Link>
                 <Link to='politics'><li>Politics</li></Link>
                 <Link to='science'><li>Science</li></Link>
-                <li>Stocks</li>
+                <Link to='business'><li>Business</li></Link>
             </ul>
         </nav>
     )

@@ -9,6 +9,7 @@ import Politics from './Views/Politics';
 import axios from 'axios'
 import Science from './Views/Science';
 import Sidebar from './Views/Sidebar'
+import Business from './Views/Business'
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
             )}/>
             <Route path='/science' render={ props => (
                 <Science {...props} renderData={renderData} articles={articles}/>
+            )}/>
+            <Route path='/business' render={ props => (
+                <Business {...props} renderData={renderData} articles={articles}/>
             )}/>
                 
              <Sidebar headlines={headlines}/> 
