@@ -4,7 +4,6 @@ import NavBar from './Components/NavBar';
 import Headlines from './Views/Headlines';
 import {Route} from 'react-router-dom'
 import Sports from './Views/Sports';
-import Weather from './Views/Weather';
 import Politics from './Views/Politics';
 import axios from 'axios'
 import Science from './Views/Science';

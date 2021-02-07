@@ -12,7 +12,6 @@ function NavBar() {
                 <Link to='science'><li>Science</li></Link>
                 <Link to='business'><li>Business</li></Link>
                 <Link to='sports'><li>Sports</li></Link>
-                <Link to='weather'><li>Weather</li></Link>
             </ul>
         </nav>
     )
