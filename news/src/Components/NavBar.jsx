@@ -5,12 +5,14 @@ import '../Styles/nav.css'
 function NavBar() {
     return (
         <nav>
-            <h3>My News</h3>
+            <h2>McLaughlin News</h2>
             <ul>
                 <Link to='/'><li>Breaking</li></Link>
                 <Link to='politics'><li>Politics</li></Link>
                 <Link to='science'><li>Science</li></Link>
                 <Link to='business'><li>Business</li></Link>
+                <Link to='sports'><li>Sports</li></Link>
+                <Link to='weather'><li>Weather</li></Link>
             </ul>
         </nav>
     )

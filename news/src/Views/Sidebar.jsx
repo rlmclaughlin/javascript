@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Styles/sidebar.css'
 
 function Sidebar(props){
- console.log(props)
+
  if(props.length === 0){return "Loading..."}
     return(
         <section className="sidebar-container">
