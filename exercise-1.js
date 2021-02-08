@@ -18,6 +18,8 @@
             }
         }
 
+        tekCamp()
+
 
         /************************************************************************************/
         //Write a function that converts the current temperature from Fahrenheit to Celsius. 
@@ -27,7 +29,7 @@
             return temp - 32 * 5 / 9
         }
 
-        farenheitCelsius(5)
+        farenheitCelsius()
        
         /************************************************************************************/
         //Write a function that converts the Celsius temperature back to Fahrenheit. 
@@ -37,7 +39,7 @@
             return temp * 9 / 5 + 32
         }
 
-        celsiusFarenheit(23)
+        celsiusFarenheit()
 
 
         /************************************************************************************/
@@ -55,6 +57,7 @@
             }
         }
 
+        canVote(25)
 
 
         /************************************************************************************/
@@ -69,8 +72,6 @@
         strToArr('Wow! You have a lot of cats!')
 
 
-
-
         /************************************************************************************/
         // Write a function that reverses your telephone number.  It should return the reversed telephone number.
 
@@ -80,7 +81,7 @@
             return Number(number.split('').reverse().join(''))
             }
 
-
+        reversePhone(9729748821)
 
 
 
@@ -99,10 +100,6 @@
 
         myCar('honda', 'civic', 2018, 'white')
             
-
-
-
-
 
         /************************************************************************************/
         // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
@@ -128,22 +125,24 @@
 
 
 
-
-
-
         /************************************************************************************/
+       
         const numbers = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
         // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
-        for(let i = 0; i <= numbers.length; i++){
-            if(numbers[i] === 0 || numbers[i] % 3 === 0){
-                console.log(numbers[i])
+        function numsArray(){
+            for(let i = 0; i <= numbers.length; i++){
+                if(numbers[i] === 0 || numbers[i] % 3 === 0){
+                    console.log(numbers[i])
+                }
             }
         }
 
+        numsArray()
 
 
         /************************************************************************************/
+       
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
@@ -152,7 +151,7 @@
             return console.log(school)
         }
 
-        lastItem(foodArray)
+        lastItem()
 
 
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
@@ -170,7 +169,7 @@
             })
          }
 
-         bothArr(foodArray, adjectiveArray)
+        bothArr(foodArray, adjectiveArray)
 
         /************************************************************* */
         // Refactor the for() loop to be a while loop.
@@ -182,15 +181,15 @@
 
         //your code...
 
-        let i = 0; 
-        while(i < 10){
-            console.log("The value in the loop is : " + i)
-            i++
+        function whileLoop(){
+            let i = 0; 
+            while(i < 10){
+                console.log("The value in the loop is : " + i)
+                i++
+            }
         }
 
-
-
-
+        whileLoop()
 
 
         /************************************************************* */
@@ -221,20 +220,17 @@
 
         // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
-        // 20 
-        // 0
-        // "zero";
-        // const zero = 20;
-        // null
-        // "0"
-        // !""
-        // {}
-        // () => {console.log("hello TEKcamp!");
-        // 125
-        // undefined
-        // ""
-
-
+        console.log(` question 1 is ${Boolean(20)}, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.`)
+        console.log(` this question is ${Boolean(0)} because 0 naturally holds a false value`)
+        console.log(` this is considered ${Boolean("zero")}, because any string with a non zero length is true`)
+        console.log(`this is ${Boolean(null)}, because null is only equal to undefined and itself. Nothing else`)
+        console.log(`this is ${Boolean("0")} because any string with a non zero length is true`) 
+        console.log(` this is ${Boolean(!"")}, because the empty strings are accompanied by an actual character `)
+        console.log(`this is considered ${Boolean({})} because empty curly braces are coerced as true`) 
+        console.log(`${Boolean(125)}, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.`)
+        console.log(` this is ${Boolean(undefined)}, because undefined is only equal to null and nothing else`) 
+        console.log(` this is ${Boolean("")} because empty strings are considered equal to 0`)
+        console.log(`this is considered truthy because a defined variable is coerced as truth`) //const zero = 20)
 
 
         /************************************************************* */
@@ -265,7 +261,6 @@
                     console.log("It's a weekend!")
                     break;
         }
-
 
         /************************************************************* */
         // Refactor the following statements to use ternary expressions:
@@ -316,7 +311,6 @@
 
         /************************************************************* */
 
-        {
             const year = 2021;
             const nums = [1,2,3,4,5];
             let sum = 0;
@@ -326,26 +320,37 @@
             //Refactor the following statements into expressions
 
 
-            // 1.
-            if(year > 2000 && year < 2100) {
-                console.log("welcome to the 21st century");
+            function welcome(){
+                if(year > 2000 && year < 2100) {
+                    console.log("welcome to the 21st century");
+                }
             }
+
+            welcome()
             
             // 2.
-            for(let i=0; i<nums.length; i++) {
-                sum += nums[i];
+
+            function total(){
+                for(let i=0; i<nums.length; i++) {
+                    sum += nums[i];
+                }
+                console.log(sum);
             }
-            console.log(sum);
-            
+
+            total()
             
             // 3.
-            while(i < nums.length) {
-                doubled.push(nums[i]*2);
-                i++;
+
+            function double(){
+                while(i < nums.length) {
+                    doubled.push(nums[i]*2);
+                    i++;
+                }
+                
+                console.log(doubled);
             }
-            
-            console.log(doubled);
-        }
+
+            double()
 
 
         /************************************************************* */
@@ -423,7 +428,7 @@
             let total = 0
             for(let i of pieces){
                 for(let j in chessPieces){
-                    let i = i.toUpperCase()
+                    i = i.toUpperCase()
                     if(i == j){
                         total += chessPieces[i]
                     } 
@@ -622,21 +627,51 @@
         Dr. Patel is not a developer.
         */
 
-        //your code here
+       
 
+    devs.map(item => {
+        return console.log(item.name + " specializes in " + andInserter(item["tech_stack"]))
+    })
+
+    function andInserter(item){
+           if(item === null){
+                return " things other than development" 
+           } else {
+               item.splice(item.length - 1, 0, "and") 
+             } 
+        return item 
+    }
 
         /************************************************************* */
         // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
         const numbersMixed = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:"val"},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
         function maxNumber(numbers) {
-            //your code...
+            let newArr = []
+            for(let i of numbers){
+               if(i === "one"){
+                    newArr.push(1)
+               } else if(i === "two"){
+                    newArr.push(2)
+                 } else if(i === "three"){
+                    newArr.push(3)
+                 } else {
+                    newArr.push(Number(i))
+                 }
+            }    
+            let filterNaN = newArr.filter(item => !isNaN(item))
+            sortNums(filterNaN, false)
+            return filterNaN.reduce((acc, curr) =>  acc + curr)
         }
+
+        maxNumber(numbersMixed)
+
 
         //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
         function sortNums(numbers,desc=false) {
-            //your code...
+            console.log(numbers.sort((a, b) => a - b))
+            console.log(numbers.sort((a, b) => b - a))
         };
 
 
@@ -646,21 +681,46 @@
 
 
             //your code...
+            let target = {
+                greet: "Thanks for visiting my site"
+            }
+            let proxy = new Proxy(target, {
+                get (user, name) {
+                    return name in user ? user[name] : `Hello, ${name}! Very nice to see you today.`
+                }
+            })
 
+            proxy.greet   
+            proxy.ryan    
+            
+            // EXPLANATION OF WHY IT'S COOL
+
+            // It's a pretty cool feature in the sense that it has flexibility. Under the dot notation,
+            // your able to invoke the targeted object, but you're also able to use it to fill data. For instance, 
+            // in the code above, i was able to fill the 'name' field when I invoked proxy.ryan. I can put any name i wish 
+            // in the dot notation, and it will populate that field, providing the code is set up correctly. 
 
 
         /************************************************************* */
         //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
-
         const mapObj = new Map();
-        mapObj.set({company : "TEKsystems"},"object");
+        mapObj.set("object",{'company' : "TEKsystems"})
+        mapObj.set("boolean",{'isPresent': false})
+        mapObj.set("number",{'age': 33})   
+        mapObj.set("undefined",{'role': undefined})
+        mapObj.set("null", {'teamWins': null})
 
-        console.log(mapObj.has({company : "TEKsystems"}));
+        console.log(mapObj.has('object', {company: "TEKsystems"}))
+
+        console.log("It returned false because the sequence in the mapObj.set() function was out of order. The 'object' string was placed in the wrong position within the parameter.")
 
         //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
-        //your code...
-
+        let arr = []
+        for (let [key, value] of mapObj) {
+            arr.push(key)
+        }
+        console.log(arr)
 
         //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
@@ -697,25 +757,53 @@
         doMath(4, 4)
 
 
-        //your code...
-
-
-
         /************************************************************* */
         //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
         //your code...
 
+        // This took a while, but it was worth it to create a recursive solution. 
 
-        //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
+        let count = 3
+
+        function multiple(x){
+            while(count > 0){
+                console.log(x) 
+                count--
+                fn(x)
+            }
+        }
+
+        function fn(y){
+            return multiple(y)
+        }
+         
+        //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable 
+        //called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) 
+        //as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
         //your code
 
+        let message = ' is how much the stock has increased'
+        let r = .05
 
-        // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
+        function stockGain(basis){
+            let growth = basis * r
+            console.log(growth + message)
+            return function years(yrs){
+                let prediction = yrs * growth 
+                   console.log(prediction + ' dollars is how much your stock is predicted to grow over ' + yrs + ' years')
+            }
+        }
+    
+        
+        // Once finished, declare a variable called futureValue that holds your stockGain function and enter 
+        // any amount for the cost basis and a number for the number of years.  Run the function returned by 
+        //the higher order function to display the future value of the stock.  
 
         //your code...
 
+        let futureValue = stockGain(3)(3)
 
 
 // DO NOT DELETE THIS EXPORT
@@ -723,9 +811,5 @@ module.exports = {
     tekCamp,
     canVote
 }
-
-
-//*************************************** */
-
 
 

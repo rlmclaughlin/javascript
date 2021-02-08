@@ -58,6 +58,26 @@ describe("tekCamp()", () => {
 });
 
 
+describe("farenheitCelsius()", () => {
+
+    test("farenheitCelsius() returns 57.2", () => {
+        console.log = jest.fn();
+        exerciseOne.tekCamp();
+        expect(exerciseOne.farenheitCelsius(75)).toBe(57.2);
+    })
+});
+
+
+
+describe("celsiusFarenheit()", () => {
+
+    test("celsiusFarenheit() returns 73.4", () => {
+        expect(exerciseOne.celsiusFarenheit(23)).toBe(73.4);
+    })
+});
+
+
+
 describe("canVote()", () => {
 
     test("canVote() returns false", () => {
