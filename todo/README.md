@@ -1,5 +1,7 @@
 # Exercise 1 - React-todo
 
+TESTING TO SEE IF NEW PUSH FIXES BUG
+
 For this exercise, you will build a TODO list app, written in React.js
 
 **Core Requirements:**
