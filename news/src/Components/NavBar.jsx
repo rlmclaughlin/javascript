@@ -11,7 +11,6 @@ function NavBar() {
                 <Link to='politics'><li>Politics</li></Link>
                 <Link to='science'><li>Science</li></Link>
                 <Link to='business'><li>Business</li></Link>
-                <Link to='sports'><li>Sports</li></Link>
             </ul>
         </nav>
     )

@@ -55,9 +55,6 @@ function App() {
             <Route path='/business' render={ props => (
                 <Business {...props} renderData={renderData} articles={articles} setSidebarGenre={setSidebarGenre}/>
             )}/>       
-            <Route path='/sports' render={ props => (
-                <Sports {...props} renderData={renderData} articles={articles} setSidebarGenre={setSidebarGenre}/>
-            )}/>  
              <Sidebar headlines={articles} sidebarGenre={sidebarGenre} renderData={renderData}/> 
         </section>
     </div>
